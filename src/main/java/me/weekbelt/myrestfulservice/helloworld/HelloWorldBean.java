@@ -1,4 +1,4 @@
-package me.weekbelt.myrestfulservice;
+package me.weekbelt.myrestfulservice.helloworld;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
