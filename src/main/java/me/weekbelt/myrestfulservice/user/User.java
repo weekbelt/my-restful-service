@@ -1,5 +1,7 @@
 package me.weekbelt.myrestfulservice.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
@@ -8,6 +10,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+@JsonIgnoreProperties(value = {"password"})
 public class User {
 
     private Integer id;
@@ -18,4 +21,6 @@ public class User {
     @Past
     private Date joinDate;
 
+    private String password;
+    private String ssn;
 }
