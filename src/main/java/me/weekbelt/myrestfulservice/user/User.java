@@ -1,5 +1,6 @@
 package me.weekbelt.myrestfulservice.user;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
@@ -10,7 +11,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-@JsonIgnoreProperties(value = {"password"})
+@JsonFilter("UserInfo")
 public class User {
 
     private Integer id;
